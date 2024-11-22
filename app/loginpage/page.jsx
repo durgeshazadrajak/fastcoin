@@ -1,10 +1,10 @@
 "use client";
 import React, { useState } from "react";
-import Login from "../components/Login";
-import Signup from "../components/Signup";
+import Login from "../Components/Login";
+import Signup from "../Components/Signup";
 import { Row, Col, Container } from "reactstrap";
 
-export default function page() {
+export default function Page() {
   const [login, setLogin] = useState(true);
   return (
     <>
@@ -13,7 +13,10 @@ export default function page() {
           <Row className="justify-content-center">
             <Col md="6">
               {login ? <Login /> : <Signup />}
-              <button onClick={() => setLogin(!login)} className="w-100 text-center mt-3 bg-transparent border-0 text-primary">
+              <button
+                onClick={() => setLogin(!login)}
+                className="w-100 text-center mt-3 bg-transparent border-0 text-primary"
+              >
                 {login
                   ? "Dont have an account sign up"
                   : "Already have an account login here"}
